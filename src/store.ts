@@ -1,5 +1,6 @@
 import { create } from 'zustand';
-import type { Board, Card, Column, Priority } from './types';
+import type { Board, Card } from './types';
+
 
 interface StoreState {
   boards: Board[];
