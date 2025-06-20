@@ -1,0 +1,64 @@
+/* Import Inter font for modern typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles */
+body {
+  @apply bg-gray-50 min-h-screen font-sans text-gray-800;
+}
+
+/* Custom component base classes — responsive & hover variants must be used in JSX/HTML */
+.btn-primary {
+  @apply bg-blue-600 text-white px-4 py-2 rounded-lg shadow-md transition-all duration-200 font-medium text-sm;
+}
+
+.btn-secondary {
+  @apply bg-gray-300 text-gray-800 px-4 py-2 rounded-lg shadow-md transition-all duration-200 font-medium text-sm;
+}
+
+.btn-danger {
+  @apply bg-red-600 text-white px-3 py-1 rounded-lg shadow-md transition-all duration-200 font-medium text-sm;
+}
+
+.btn-success {
+  @apply bg-green-600 text-white px-4 py-2 rounded-lg shadow-md transition-all duration-200 font-medium text-sm;
+}
+
+.input {
+  @apply border border-gray-300 p-2 rounded-lg w-full text-sm;
+}
+.table {
+  @apply w-full border-collapse bg-white rounded-lg shadow-lg overflow-hidden;
+}
+
+.table th {
+  @apply bg-blue-50 text-blue-800 font-semibold text-left p-4 text-sm;
+}
+
+.table td {
+  @apply border-t border-gray-200 p-4 text-sm;
+}
+
+.table tr:hover {
+  @apply bg-gray-100 transition-colors duration-150;
+}
+
+/* Animation for content fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  @apply animate-[fadeIn_0.3s_ease-out];
+}
